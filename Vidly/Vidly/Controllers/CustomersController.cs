@@ -17,6 +17,17 @@ namespace Vidly.Controllers
             return View(customers);
         }
 
+        // GET: Customers/Details/{Id}
+        public ActionResult Details(int Id)
+        {
+            var customer = GetCustomers().SingleOrDefault(c => c.Id == Id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            return View(customer);
+        }
+
         private IEnumerable<Customer> GetCustomers()
         {
             return new List<Customer>
