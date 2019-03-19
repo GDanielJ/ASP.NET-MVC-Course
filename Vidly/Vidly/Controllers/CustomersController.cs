@@ -17,7 +17,7 @@ namespace Vidly.Controllers
             return View(customers);
         }
 
-        private IEnumerable<Customer> GetCustomers() // TODO - forts med tillhörande View.
+        private IEnumerable<Customer> GetCustomers()
         {
             return new List<Customer>
             {
