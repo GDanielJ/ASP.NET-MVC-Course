@@ -14,10 +14,10 @@ namespace Vidly2.Dtos
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
+        public GenreDto Genre { get; set; }
 
         [Required]
         public int GenreId { get; set; }
-
         public DateTime ReleaseDate { get; set; }
 
         // Tagit bort DateAdded här. Rätt?
